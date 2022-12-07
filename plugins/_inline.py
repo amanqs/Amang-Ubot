@@ -50,8 +50,8 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• Repo •", url="https://github.com/TeamUltroid/Ultroid"),
-        Button.url("• Support •", url="t.me/UltroidSupportChat"),
+        Button.url("• Repo •", url="https://github.com/amanqs/Amang-Ubot"),
+        Button.url("• Support •", url="t.me/amwangstore"),
     ],
 ]
 
@@ -60,10 +60,10 @@ SUP_BUTTONS = [
 
 @in_pattern(owner=True, func=lambda x: not x.text)
 async def inline_alive(o):
-    TLINK = inline_pic() or "https://graph.org/file/74d6259983e0642923fdb.jpg"
-    MSG = "• **Ultroid Userbot •**"
+    TLINK = inline_pic() or "https://telegra.ph/file/c842e881934735b36fdca.jpg"
+    MSG = "• **Amang Userbot •**"
     WEB0 = InputWebDocument(
-        "https://graph.org/file/acd4f5d61369f74c5e7a7.jpg", 0, "image/jpg", []
+        "https://telegra.ph/file/c842e881934735b36fdca.jpg", 0, "image/jpg", []
     )
     RES = [
         await o.builder.article(
@@ -71,7 +71,7 @@ async def inline_alive(o):
             text=MSG,
             include_media=True,
             buttons=SUP_BUTTONS,
-            title="Ultroid Userbot",
+            title="Amang Userbot",
             description="Userbot | Telethon",
             url=TLINK,
             thumb=WEB0,
@@ -82,7 +82,7 @@ async def inline_alive(o):
         RES,
         private=True,
         cache_time=300,
-        switch_pm="👥 ULTROID PORTAL",
+        switch_pm="👥 AMANG PORTAL",
         switch_pm_param="start",
     )
 
@@ -107,7 +107,7 @@ async def inline_handler(event):
         )
     else:
         result = await event.builder.article(
-            title="Ultroid Help Menu", text=text, buttons=_main_help_menu
+            title="Amang Help Menu", text=text, buttons=_main_help_menu
         )
     await event.answer([result], private=True, cache_time=300, gallery=True)
 
@@ -195,7 +195,7 @@ async def uptd_plugin(event):
                 help_ += "\n"
     if not help_:
         help_ = f"{file} has no Detailed Help!"
-    help_ += "\n© @TeamUltroid"
+    help_ += "\n© @amwang"
     buttons = []
     if inline_pic():
         data = f"sndplug_{key}_{file}"
@@ -204,7 +204,7 @@ async def uptd_plugin(event):
         buttons.append(
             [
                 Button.inline(
-                    "« Sᴇɴᴅ Pʟᴜɢɪɴ »",
+                    "« Kirim Plugin »",
                     data=data,
                 )
             ]
@@ -400,7 +400,7 @@ async def ibuild(e):
                             _pic,
                             title="Ultroid Op",
                             text=txt,
-                            description="@TeamUltroid",
+                            description="@amwang",
                             buttons=btn,
                             link_preview=False,
                         )
@@ -413,10 +413,10 @@ async def ibuild(e):
                     cont = InputWebDocument(pic, 0, mime_type, [])
                 results = [
                     await builder.article(
-                        title="Ultroid Op",
+                        title="Amang Op",
                         type=_type,
                         text=txt,
-                        description="@TeamUltroid",
+                        description="@amwang",
                         include_media=include_media,
                         buttons=btn,
                         thumb=cont,
@@ -428,7 +428,7 @@ async def ibuild(e):
         except Exception as er:
             LOGS.exception(er)
     result = [
-        await builder.article("Ultroid Op", text=txt, link_preview=False, buttons=btn)
+        await builder.article("Amang Op", text=txt, link_preview=False, buttons=btn)
     ]
     await e.answer(result)
 
