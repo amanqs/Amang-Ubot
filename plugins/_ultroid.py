@@ -14,21 +14,21 @@ from telethon.errors import (
 from . import LOG_CHANNEL, LOGS, Button, asst, eor, get_string, ultroid_cmd
 
 REPOMSG = """
-• **ULTROID USERBOT** •\n
-• Repo - [Click Here](https://github.com/TeamUltroid/Ultroid)
+• **AMANG USERBOT** •\n
+• Repo - [Click Here](https://github.com/amanqs/Amang-Ubot)
 • Addons - [Click Here](https://github.com/TeamUltroid/UltroidAddons)
-• Support - @UltroidSupportChat
+• Support - @amwangs
 """
 
 RP_BUTTONS = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
-        Button.url("Addons", "https://github.com/TeamUltroid/UltroidAddons"),
+        Button.url(get_string("bot_3"), "https://github.com/amanqs/Amang-Ubot"),
+        Button.url("Addons", "https://github.com/amanqs/Amang-Ubot"),
     ],
-    [Button.url("Support Group", "t.me/UltroidSupportChat")],
+    [Button.url("Support Group", "t.me/amwangstore")],
 ]
 
-ULTSTRING = """🎇 **Thanks for Deploying Ultroid Userbot!**
+ULTSTRING = """🎇 **Thanks for Deploying Amang Userbot!**
 
 • Here, are the Some Basic stuff from, where you can Know, about its Usage."""
 
@@ -59,7 +59,7 @@ async def useUltroid(rs):
     msg = await asst.send_message(
         LOG_CHANNEL,
         ULTSTRING,
-        file="https://graph.org/file/54a917cc9dbb94733ea5f.jpg",
+        file="https://telegra.ph/file/c842e881934735b36fdca.jpg",
         buttons=button,
     )
     if not (rs.chat_id == LOG_CHANNEL and rs.client._bot):
